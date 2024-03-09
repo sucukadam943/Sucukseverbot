@@ -1,0 +1,48 @@
+import discord
+from discord.ext import commands
+from bot_logic import gen_pass, emoji_gen, yazı_tura, help, carpma, toplama
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f'{bot.user} olarak giriş yaptık')
+
+@bot.command()
+async def hello(ctx):
+    await ctx.send(f'Merhaba! Ben {bot.user}, bir Discord sohbet botuyum!')
+
+@bot.command()
+async def heh(ctx, count_heh=5):
+    await ctx.send("he" * count_heh)
+
+@bot.command()
+async def şifre(ctx, uzunluk=7):
+    await ctx.send(gen_pass.gen_pass(uzunluk))
+
+@bot.command()
+async def emoji(ctx):
+    await ctx.send(emoji_gen.emoji_olusturucu())
+
+@bot.command()
+async def yazıtura(ctx):
+    await ctx.send(yazı_tura.yazi_tura())
+
+@bot.command()
+async def carp(ctx, sayı1: int, sayı2: int):
+    sonuccarpma = carpma.carpma(sayı1, sayı2)
+    await ctx.send(f"Çarpım sonucu: {sonuccarpma}")
+
+@bot.command()
+async def topla(ctx, sayı1: int, sayı2: int):
+    sonuctoplama = toplama.toplama(sayı1, sayı2)
+    await ctx.send(f"Toplam sonucu: {sonuctoplama}")
+
+@bot.command()
+async def yardım(ctx):
+    await ctx.send(help.help())
+
+bot.run("MTIxMzQwMTE0NDIzNjMxMDU1OA.GZue5a.M-5_SCPYIq_SuIfvXFanYEYxAdh6L5sUDisdmg")
