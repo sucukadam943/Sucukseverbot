@@ -45,4 +45,4 @@ async def topla(ctx, sayı1: int, sayı2: int):
 async def yardım(ctx):
     await ctx.send(help.help())
 
-bot.run("MTIxMzQwMTE0NDIzNjMxMDU1OA.GZue5a.M-5_SCPYIq_SuIfvXFanYEYxAdh6L5sUDisdmg")
+bot.run("Bot token here")
