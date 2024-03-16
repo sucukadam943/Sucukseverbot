@@ -1,0 +1,9 @@
+import random
+
+tum_karakterler = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX"
+
+def gen_pass(uzunluk):
+    sonuc = ""
+    for i in range(uzunluk):
+        sonuc += random.choice(tum_karakterler)
+    return sonuc
