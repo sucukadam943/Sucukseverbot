@@ -1,0 +1,4 @@
+import random
+
+def rastgele_sayı(min_değer, max_değer):
+    return random.randint(min_değer, max_değer)
