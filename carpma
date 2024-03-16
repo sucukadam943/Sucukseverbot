@@ -1,0 +1,2 @@
+def carpma(sayı1, sayı2):
+    return sayı1 * sayı2
