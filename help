@@ -1,0 +1,13 @@
+def help():
+    help_message = (
+        "Kullanılabilir Komutlar:\n"
+        "$merhaba - Kullanıcıya 'Selam!' ile selam verir.\n"
+        "$bye - El sallayan bir emoji gönderir.\n"
+        "$şifre sayı1 - Sayı 1 uzunluğunda Rastgele bir şifre oluşturur.\n"
+        "$emoji - Rastgele bir emoji oluşturur.\n"
+        "$yazı tura - Yazı tura atar (yazı mı, tura mı).\n"
+        "$topla sayı1 sayı2 - sayı1 ve sayı2'yi toplar.\n"
+        "$carp sayı1 sayı2 - sayı1 ve sayı2'yi çarpar.\n"
+        "$yardım - Bu yardım mesajını gösterir."
+    )
+    return help_message
